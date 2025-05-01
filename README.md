@@ -1,3 +1,5 @@
+## Name: G.Ramanujam
+# Reg.No: 212224240129
 # EX-26-AREA-OF-RECTANGLE-USING- POINTER
 ## AIM
 To write a C Program to find area of rectangle using pointer.
@@ -10,9 +12,22 @@ To write a C Program to find area of rectangle using pointer.
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include<stdio.h>
+int main()
+{
+int mlenght,width
+int*len=len&lenght, *wid=&width;
+scanf("%d%d",len,wid);
+float area=(*len)*(*wid);
+printf("Area of rectangle = %f sq. units ", area);
+return 0;
+}
+```
 
 ## OUTPUT
 		       	
+![Screenshot 2025-05-01 211512](https://github.com/user-attachments/assets/d78637ee-113f-40e7-a4e5-33db1bcc7075)
 
 
 ## RESULT
@@ -34,9 +49,34 @@ To write a C Program to print 'WELCOME' using malloc() and free().
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+char *str = (char *)malloc(8 * size(char));
+if (str == NULL)
+{
+printf("Memory allocation failed!\n);
+return 1;
+}
+str[0] = 'w'
+str[1] = 'E';
+str[2] ='L'
+str[3] ='C'
+str[4[ ='O'
+str [5] ='M'
+str[6] ='E'
+str[7] ='\0';
+printf("%s\n",str);
+free(str);
+return 0;
+}
+```
 
 ## OUTPUT
 
+![Screenshot 2025-05-01 211602](https://github.com/user-attachments/assets/53a23aa2-5c87-4474-914b-c10fa7c556ef)
 
 
 ## RESULT
@@ -60,9 +100,30 @@ To write a C Program to store the student information and display it using struc
 4.	Stop the program.
 
 ## PROGRAM
+```
+#include<stdio.h>
+struct student {
+ chsr name[50];
+int rollNumber;
+float marks;
+}
+int main() {
+ struct student student;
+scanf("%s", student.name);
+scanf("%d", &student.rollNumber);
+scanf("%f", &student.marks);
+printf("Displaying Information:\n);
+printf("Name" %s\n", student.name);
+printf("Roll number: %d\n",student.rollBumber);
+printf("Marks: %.1f\n",student.marks);
+return 0;
+}
 
+```
 
 ## OUTPUT
+
+![Screenshot 2025-05-01 211649](https://github.com/user-attachments/assets/f22c13de-1895-4cc1-a0a4-56f0ca636bb5)
 
 
 ## RESULT
@@ -79,19 +140,45 @@ Thus the program to store the student information and display it using structure
 To write a C Program to read and store the data of 3 employees and calculate their Gross Salary using the concept of structure.
 
 ## ALGORITHM
-
 1.	Start the program.
 2.	Create an employee structure with name, id and salary details as members.
 3.	Using structure variable read the structure members.
 4.	Calculate the gross salary and print the details.
 5.	Stop the program.
-
 ## PROGRAM
-
+```
+#include<stdio.h>
+struct employee
+{
+int eno;
+char dept[20];
+float basicpay;
+float da;
+float hra;
+float grossSalary;
+};
+int main()
+{
+struct employee emp[3]
+for (int i=0;i<3;i++)
+{
+scanf("%d %s %f", &emp[i].eno,emp[i].dept,&emp[i].basipay);
+emp[i].da=emp[i].basicpay*0.10;
+emp[i].hra=emp[i].basicpay*0.30;
+emp[i].grossSalary=emp[i].basicpay+emp[i].hra;
+}
+printf("Details of the Employee:\n);
+for(int i=0;,i<3;i++)
+{
+printf("%d %s %.0f %.0f %.2f\n", emp[i].eno,emp[i].dept,emp[i].basicpay,em
+}
+}
+```
 
  ## OUTPUT
 
- 
+ ![Screenshot 2025-05-01 211740](https://github.com/user-attachments/assets/090c3261-d9ee-455a-ac64-85514e45a092)
+
 
 ## RESULT
 
@@ -107,7 +194,7 @@ Thus the C program to read and store the data of 3 employees and calculate their
 Create a C program to calculate the total and average of student using structure.
 
 ## ALGORITHM 
-
+```
 Step 1: Start the program.
 Step 2: Define a struct student with:
 •	name: a character array (size 10) for the student's name (not used in the logic).
@@ -132,13 +219,52 @@ Step 6: Override Total (Hardcoded):
 Step 7: Output Loop (i = 0 to 1):
 •	Print s[i].total for each student.
 Step 8: End the program.
-
+```
 ## PROGRAM
-
+```
+#include<studio.h>
+struct student
+{
+char name[10];
+int rollno;
+int subject[5];
+int total;
+float average;
+};
+int main() {
+ struct student s[2];
+int i,j;
+for(i=0; i<2; i++) {
+printf("Enter details for student %d\n",i+1);
+printf("Enter roll number: ");
+scanf("%d", &s[i].rollno);
+printf(""Enter maarks for 5 subjects: ");
+for(j=0; j <5; j++){
+scanf("%d", &s[i].subject[j]);
+}
+s[i].total=0;
+for(j=0;j<5;j++){
+fs[i].total +=s[i].subject[j];
+}
+s[i].average=s[i].total/5.0;
+if(i==0)s[i].total=374;
+if((i==1) s[i].total=383;
+}
+for(i=0;i<2;i++) {
+printf("\nStudent %d:\n",i+1);
+printf("""""Total marks: %d\n", s[i].tatal);
+printf("Average marks: %.2f\n",s[i].average);
+}
+return 0;
+}
+```
 
 ## OUTPUT
 
- 
+ ![Screenshot 2025-05-01 211934](https://github.com/user-attachments/assets/6f769ee0-d07e-4667-bdea-c561c3f07fa2)
+
+![Screenshot 2025-05-01 212001](https://github.com/user-attachments/assets/47422c26-3c67-42c8-a229-ca7c99cf2ddd)
+
 
 ## RESULT
 
